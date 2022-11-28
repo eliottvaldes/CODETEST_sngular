@@ -4,8 +4,10 @@
     </div>
 </template>
 
+
 <script>
 export default {
+    name: 'SeriesForm',
     
 }
 </script>
