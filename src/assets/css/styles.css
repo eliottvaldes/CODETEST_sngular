@@ -1,5 +1,27 @@
 body {
-    background-color: rgb(6, 27, 43);
-    font-family: 'Montserrat', sans-serif;
-  }
-  
+  background-color: rgb(6, 27, 43);
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  background-color: #f7b334;
+  border-radius: 2.5rem;
+  border: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: #ffa703;
+  transition: all 0.5s ease-in-out;
+
+}
+
+/* style when button is disabled */
+button:disabled {
+  background-color: #d1d1d1;
+  color: #737373;
+  cursor: default;
+}

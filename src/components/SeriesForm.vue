@@ -1,31 +1,34 @@
 <template>
-    <div>
-        <label for="valueId">
+    <div class="my-3">
+
+        <label for="valueId" class="form-label">
             Asigna un valor para <b><i>n</i></b>
         </label>
         <input 
             v-model.trim="numberSerie" 
             :disabled="isInputDisabled" 
             type="text" 
-            pattern="[0-9]*"         
+            pattern="[0-9]*" 
             inputmode="numeric"
+            class="form-control"
             aria-describedby="valueId" 
             placeholder="4" 
             required
         >
-        <small v-if="errMsg">
+        <small v-if="errMsg" class="text-danger">
             {{ errMsg }}
             <br>
         </small>
 
-        <small id="helpId">
-            * Entre mayor sea el valor de n mayor será el tiempo de ejecución
+        <small id="helpId" class="text-muted">
+            * Entre mayor sea el valor de n, mayor será la cantidad de recursos que se consumirán.
         </small>
 
         <button @click="this.disableButton(), $emit('executeSerie', parseInt(numberSerie))" :disabled="isButtonDisabled"
-            type="button">
+            type="button" class="btn-get-serie">
             Calcular serie >
         </button>
+
     </div>
 </template>
 
@@ -95,5 +98,12 @@ export default {
 </script>
 
 <style scoped>
-
+.btn-get-serie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
 </style>
