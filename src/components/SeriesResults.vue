@@ -1,7 +1,19 @@
 <template>
-    <div v-if="showResults">
-        El resultado de la serie cuando <var> n = {{ result.numberSerie }} </var> es:
-        <b> {{ result.result }} </b>
+    <div v-if="showResults" class="fade-in">
+        <div class="row justify-content-center">
+            <div class="col-11">
+                <div class="card shadow p-3 mb-4 bg-body rounde">  
+                    <div class="text-center">
+                        <p>
+                            El resultado de la serie cuando <var> n = {{result.numberSerie}} </var> es:
+                        </p>
+                        <h5 class="my-3">
+                            <b> {{result.result}} </b>
+                        </h5>
+                    </div>                 
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
