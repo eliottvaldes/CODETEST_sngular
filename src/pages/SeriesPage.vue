@@ -102,7 +102,16 @@ export default {
             this.isInputDisabled = false
         },
         createErrorAlert(error) {
-            alert(error)
+            const alert = document.createElement('div')
+            alert.className = 'alert alert-danger alert-dismissible fade show'
+            alert.setAttribute('role', 'alert')
+            alert.innerHTML = `
+                    <strong>Opss!</strong> Recuerda que ${error.message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `
+            document.getElementById('errorAlert').appendChild(alert)
+
+            this.isInputDisabled = false
         }
 
     },
